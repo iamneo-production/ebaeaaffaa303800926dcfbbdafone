@@ -29,7 +29,7 @@ public class ShoppingCartController {
 
             cart.add(product);
 
-            return ResponseEntity.status(HttpStatus.CREATED).body("Successfully added the product to the cart");
+            return ResponseEntity.status(HttpStatus.CREATED).body("Product added to the cart successfully.");
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Invalid request payload or missing required fields.");
