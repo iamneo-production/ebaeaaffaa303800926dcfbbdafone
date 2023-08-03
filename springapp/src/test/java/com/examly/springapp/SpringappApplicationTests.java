@@ -117,9 +117,7 @@ public class SpringappApplicationTests {
 
 		// Then
 		assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
-		assertNull(response.getBody());
-	}
-
+		assertNull(response.getBody()
 	@Test
 
 	public void controllerfolder() {
