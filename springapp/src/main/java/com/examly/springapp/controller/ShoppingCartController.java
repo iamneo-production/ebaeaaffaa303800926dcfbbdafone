@@ -44,7 +44,7 @@ public class ShoppingCartController {
             }
 
             double totalPrice = cart.stream().mapToDouble(product -> product.getPrice() * product.getQuantity()).sum();
-            return ResponseEntity.ok("Successfully retrieved the total price of the cart: " + totalPrice);
+            return ResponseEntity.ok(totalPrice);
         } catch (NoSuchElementException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("The cart is empty.");
         }
